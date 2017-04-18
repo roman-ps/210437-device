@@ -12,13 +12,14 @@
         <div class="header-top">
           <form class="header-user_menu">
             <input type="text" name="search" placeholder="Поиск по сайту">
+          </form>
             <a href="#" class="header-enter">Войти</a>
             <a href="#" class="header-compare">Сравнить</a>
             <a href="#" class="header-basket">Корзина</a>
-          </form>
         </div>
         <ul class="header-menu">
-          <li>Каталог товаров</li>
+          <li>
+            <span>Каталог товаров</span>
             <ul class="header-submenu">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -27,12 +28,15 @@
               <li><a href="#">Умные часы</a></li>
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
+          </li>
+        </ul>
+        <ul class="header-right-menu">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
       </div>
-      
+
       <div class="nav">
         <h2>Моноподы для селфи</h2>
         <ul class="nav-breadcrumbs">
@@ -42,21 +46,22 @@
         </ul>
       </div>
     </div> <!--  конец wrapper -->
-    
+
     <div class="filter">
       <div class="wrapper">
-        <h3 class="filter-head">Фильтр</h3>
-        <div class="filter-price">
-          <p>Стоимость</p>
-          <div class="filter-range_controls"></div>
-          <div class="filter-min_toggle"></div>
-          <div class="filter-max_toggle"></div>
-        </div>
-        <div class="filter-price_control">
-          <span class="filter-min_price">от 0</span>
-          <span class="filter-max_price">до 5000</span>
-        </div>
         <form name="forma">
+          <h3 class="filter-head">Фильтр</h3>
+          <div class="filter-price">
+            <p>Стоимость</p>
+            <div class="filter-range_controls"></div>
+            <div class="filter-min_toggle"></div>
+            <div class="filter-max_toggle"></div>
+          </div>
+          <div class="filter-price_control">
+            <span class="filter-min_price">от 0</span>
+            <span class="filter-max_price">до 5000</span>
+          </div>
+<!--        <form name="forma">-->
           <div class="form-checkbox_container">
             <p class="form-title">Цвет</p>
             <div class="form-checkbox_item">
@@ -91,11 +96,11 @@
               <label for="radio2">Нет</label>
             </div>
           </div>
-          <input type="button" class="form-send" form="forma" value="Отправить">
+          <input type="submit" class="form-send" value="Отправить">
         </form>
       </div>
     </div>
-    
+
     <div class="sort">
       <div class="sort-header">
         <div class="wrapper">
@@ -105,29 +110,40 @@
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
           </ul>
-          <div class="sort-order"></div>
+          <div class="sort-order">
+            <a href="#" class="sort-up"></a>
+            <a href="#" class="sort-down"></a>
+          </div>
         </div>
       </div>
       <div class="sort-container">
         <div class="sort-item">
           <img src="http://placehold.it/360x380">
-          <span class="sort-item_title">Любительская селфи-палка</span>
-          <span class="sort-item_price">500 руб.</span>
+          <p class="sort-item_title">
+            <span class="sort-item_title">Любительская селфи-палка</span>
+            <span class="sort-item_price">500 руб.</span>
+          </p>
         </div>
         <div class="sort-item">
           <img src="http://placehold.it/360x380">
-          <span class="sort-item_title">Профессиональная селфи-палка</span>
-          <span class="sort-item_price">1500 руб.</span>
+          <p class="sort-item_title">
+            <span class="sort-item_title">Профессиональная селфи-палка</span>
+            <span class="sort-item_price">1500 руб.</span>
+          </p>
         </div>
         <div class="sort-item">
           <img src="http://placehold.it/360x380">
-          <span class="sort-item_title">Непотопляемая селфи-палка</span>
-          <span class="sort-item_price">2500 руб.</span>
+          <p class="sort-item_title">
+            <span class="sort-item_title">Непотопляемая селфи-палка</span>
+            <span class="sort-item_price">2500 руб.</span>
+          </p>
         </div>
         <div class="sort-item">
           <img src="http://placehold.it/360x380">
-          <span class="sort-item_title">Селфи-палка "Следуй за мной"</span>
-          <span class="sort-item_price">4900 руб.</span>
+          <p class="sort-item_title">
+            <span class="sort-item_title">Селфи-палка "Следуй за мной"</span>
+            <span class="sort-item_price">4900 руб.</span>
+          </p>
         </div>
       </div>
       <div class="sort-pagination">
@@ -140,15 +156,17 @@
         <a href="#" class="sort-forward">Вперед</a>
       </div>
     </div>
-    
+
     <div class="footer">
       <div class="wrapper">
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">DEVICE</a>
-        <div class="footer-user_menu">
-          <a href="#" class="footer-enter">Войти</a>
-          <a href="#" class="footer-compare">Сравнить</a>
-          <a href="#" class="footer-basket">Корзина</a>
+        <div class="footer-top">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">DEVICE</a>
+          <div class="footer-user_menu">
+            <a href="#" class="footer-enter">Войти</a>
+            <a href="#" class="footer-compare">Сравнить</a>
+            <a href="#" class="footer-basket">Корзина</a>
+          </div>
         </div>
         <div class="footer-main">
           <p class="footer-address">г. Москва, ул. Строителей 15</p>
@@ -160,7 +178,7 @@
           <p class="footer-phone">Тел: +7(495)495-95-95</p>
         </div>
         <div class="footer-bottom">
-          <div class="footer-tag"></div>
+<!--          <div class="footer-tag"></div>-->
           <div class="footer-social">
             <a href="#" class="social-btn facebook"></a>
             <a href="#" class="social-btn instagramm"></a>
@@ -171,6 +189,6 @@
 
       </div>
     </div>
-              
+
   </body>
 </html>

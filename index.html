@@ -12,13 +12,14 @@
         <div class="header-top">
           <form class="header-user_menu">
             <input type="text" name="search" placeholder="Поиск по сайту">
-            <a href="#" class="header-enter">Войти</a>
-            <a href="#" class="header-compare">Сравнить</a>
-            <a href="#" class="header-basket">Корзина</a>
           </form>
+          <a href="#" class="header-enter">Войти</a>
+          <a href="#" class="header-compare">Сравнить</a>
+          <a href="#" class="header-basket">Корзина</a>
         </div>
         <ul class="header-menu">
-          <li>Каталог товаров</li>
+          <li>
+            <span>Каталог товаров</span>
             <ul class="header-submenu">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
@@ -27,6 +28,9 @@
               <li><a href="#">Умные часы</a></li>
               <li><a href="#">Квадрокоптеры</a></li>
             </ul>
+          </li>
+        </ul>
+        <ul class="header-right-menu">
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -94,26 +98,30 @@
       <img class="company-item" src="http://placehold.it/260x100" alt="vive">
     </div>
 
-    <div class="about">
-      <h3>О нас</h3>
-      <p>Огромный выбор гаджетов не оставитравнодушным гика,
-      который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки
-      России! DEVICE работает со многими транспортными компаниями:</p>
-      <ul class="about-menu">
-        <li class="about-item">Деловые линии</li>
-        <li class="about-item">Автотрейдинг</li>
-        <li class="about-item">ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="about-footer">Подробнее о нас</a>
-    </div>
+    <div class="about-contacts">
 
-    <div class="contacts">
-      <h3>Контакты</h3>
-      <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-      проверить работоспособность покупки. Всякое бывает.</p>
-      <a href="https://yandex.ru/maps" class="contacts-map"><img src="http://placehold.it/560x222" alt="map"></a>
-      <a class="contacts-footer">Напишите нам</a>
+      <div class="about">
+        <h3>О нас</h3>
+        <p>Огромный выбор гаджетов не оставитравнодушным гика,
+        который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки
+        России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="about-menu">
+          <li class="about-item">Деловые линии</li>
+          <li class="about-item">Автотрейдинг</li>
+          <li class="about-item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="about-footer">Подробнее о нас</a>
+      </div>
+
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+        проверить работоспособность покупки. Всякое бывает.</p>
+        <a href="https://yandex.ru/maps" class="contacts-map"><img src="http://placehold.it/560x222" alt="map"></a>
+        <a class="contacts-footer">Напишите нам</a>
+      </div>
+
     </div>
 
   </div> <!-- конец wrapper -->
@@ -121,11 +129,13 @@
     <div class="footer">
       <div class="wrapper">
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">DEVICE</a>
-        <div class="footer-user_menu">
-          <a href="#" class="footer-enter">Войти</a>
-          <a href="#" class="footer-compare">Сравнить</a>
-          <a href="#" class="footer-basket">Корзина</a>
+        <div class="footer-top">
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">DEVICE</a>
+          <div class="footer-user_menu">
+            <a href="#" class="footer-enter">Войти</a>
+            <a href="#" class="footer-compare">Сравнить</a>
+            <a href="#" class="footer-basket">Корзина</a>
+          </div>
         </div>
         <div class="footer-main">
           <p class="footer-address">г. Москва, ул. Строителей 15</p>
@@ -137,7 +147,7 @@
           <p class="footer-phone">Тел: +7(495)495-95-95</p>
         </div>
         <div class="footer-bottom">
-          <div class="footer-tag"></div>
+<!--          <div class="footer-tag"></div>-->
           <div class="footer-social">
             <a href="#" class="social-btn facebook"></a>
             <a href="#" class="social-btn instagramm"></a>
