@@ -6,6 +6,16 @@ body {
   font-family: 'Gilroy', 'Arial', sans-serif;
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 h1 {
   font-size: 48px;
   line-height: 60px;
@@ -16,4 +26,164 @@ h2 {
   font-size: 47px;
   line-height: 56px;
   font-weight: bold;
+}
+
+/* INDEX.HTML */
+
+/* header */
+
+.header-submenu {
+  display: none;
+}
+
+.header-block_left {
+  outline: 1px solid red;
+  float: left;
+  width: 580px;
+}
+
+.header-block_right {
+  outline: 1px solid green;
+  float: right;
+  width: 580px;
+}
+
+.header-right-menu li{
+  display: inline-block;
+}
+
+/* sliders */
+
+.sliders-container {
+  margin-left: 600px;
+  clear: both;
+}
+
+/* catalog */
+
+.catalog {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-item {
+  outline: 1px solid green;
+  display: block;
+  width: 160px;
+}
+
+.item-container {
+  display: block;
+  height: 160px;
+}
+
+/* options */
+
+.options-menu {
+  float: left;
+  width: 400px;
+}
+
+.options-tab {
+  float: left;
+  width: 760px;
+}
+
+/* about-contacts */
+
+.about-contacts {
+  display: flex;
+}
+
+/* footer */
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  display: flex;
+}
+
+.footer-menu li {
+  display: inline-block;
+}
+
+.footer-social {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* popup */
+
+.popup {
+  display: none;
+}
+
+
+/* CATALOG.HTML */
+
+/* nav */
+
+.nav {
+  clear: both;
+}
+
+.nav-breadcrumbs li {
+  display: inline-block;
+}
+
+/* filter-sort */
+
+
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  width: 330px;
+}
+
+.sort {
+  width: 760px;
+}
+
+/* filter */
+
+
+/* sort */
+
+.sort-header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sort-filter li {
+  display: inline-block;
+}
+
+.sort-order {
+  flex-grow: 1;
+}
+
+.sort-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sort-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-pages li {
+  display: inline-block;
 }
