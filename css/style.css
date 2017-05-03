@@ -46,6 +46,16 @@ h2 {
   font-size: 47px;
   line-height: 56px;
   font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 56px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 /* INDEX.HTML */
@@ -63,6 +73,7 @@ h2 {
 
 .header-search {
   line-height: 36px;
+  letter-spacing: 0.01em;
 }
 
 .header-submenu {
@@ -90,8 +101,8 @@ h2 {
   flex-grow: 1;
 }
 
-
-.header-user-menu a {
+.header-user-menu a,
+.header-user-login a{
   line-height: 36px;
 }
 
@@ -282,7 +293,7 @@ h2 {
 
 .footer-bottom::before {
   content: '';
-  background-color: red;
+  background-color: #ffc600;
   position: absolute;
   width: 80px;
   height: 10px;
@@ -299,8 +310,11 @@ h2 {
 
 /* nav */
 
-.nav {
-  clear: both;
+
+.nav-breadcrumbs {
+  font-size: 14px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
 }
 
 .nav-breadcrumbs li {
@@ -314,27 +328,59 @@ h2 {
   justify-content: space-between;
 }
 
+/* filter */
+
 .filter {
   width: 330px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.2em;
 }
+
+.filter-price,
+.form-title {
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+
+.form-send {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.filter label,
+.filter-price_control {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* sort */
 
 .sort {
   width: 760px;
+  min-height: 70px;
 }
-
-/* filter */
-
-
-/* sort */
 
 .sort-header {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.sort-filter {
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .sort-filter li {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 .sort-order {
@@ -347,6 +393,19 @@ h2 {
   width: 360px;
 }
 
+.sort-item_head {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.sort-item_price {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 .sort-container {
   display: flex;
   justify-content: space-between;
@@ -356,9 +415,23 @@ h2 {
 .sort-pagination {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.page-active {
+  opacity: 1;
+}
+
+.sort-pages li{
+  opacity: 0.3;
 }
 
 .sort-pages li {
   display: inline-block;
-  vertical-align: middle;
 }
