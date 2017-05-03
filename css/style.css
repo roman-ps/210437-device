@@ -1,9 +1,30 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+    url('Gilroylight.woff2') format('woff2'),
+    url('Gilroylight.woff') format('woff'),
+    url('Gilroylight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
+    url('Gilroyextrabold.woff2') format('woff2'),
+    url('Gilroyextrabold.woff') format('woff'),
+    url('Gilroyextrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
 body {
-  font-size: 18px;
-  line-height: 36px;
-  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
   color: #000000;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: 'Open Sans', 'Arial', sans-serif;
 }
 
 .wrapper {
@@ -11,16 +32,20 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 48px;
-  line-height: 60px;
-  font-weight: bold;
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 h2 {
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 47px;
   line-height: 56px;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 /* INDEX.HTML */
@@ -36,8 +61,14 @@ h2 {
   display: flex;
 }
 
+.header-search {
+  line-height: 36px;
+}
+
 .header-submenu {
   display: none;
+  letter-spacing: 0.01em;
+  line-height: 36px;
 }
 
 .header-block_left {
@@ -50,6 +81,34 @@ h2 {
   width: 580px;
 }
 
+.header-user-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-enter {
+  flex-grow: 1;
+}
+
+
+.header-user-menu a {
+  line-height: 36px;
+}
+
+.header-right-menu {
+  font-size: 0;
+}
+
+.header-right-menu a,
+.header-menu span {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .header-right-menu li{
   display: inline-block;
 }
@@ -60,11 +119,56 @@ h2 {
   padding-left: 600px;
 }
 
+.sliders-switch a {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.sliders-features {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #000000;
+  letter-spacing: 0.01em;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.feature-properties {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.sliders-features1 {
+  flex-basis: 31%;
+}
+
+.sliders-features2 {
+  flex-basis: 23%;
+}
+
+.sliders-features3 {
+  flex-basis: 46%;
+}
+
 /* catalog */
 
 .catalog {
   display: flex;
   justify-content: space-between;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .catalog-item {
@@ -85,6 +189,12 @@ h2 {
 }
 
 .options-menu {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   width: 400px;
 }
 
@@ -99,17 +209,52 @@ h2 {
   justify-content: space-around;
 }
 
+.company-item {
+  opacity: 0.2;
+}
+
 /* about-contacts */
 
 .about-contacts {
   display: flex;
 }
 
+.about-menu {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+}
+
+.about-footer,
+.contacts-footer {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 /* footer */
+
+.footer {
+  min-height: 323px;
+  background: #464646;
+}
+
+.footer,
+.footer a{
+  color: #ffffff;
+}
 
 .footer-top {
   display: flex;
   justify-content: space-between;
+}
+
+.footer-user_menu {
+  line-height: 36px;
 }
 
 .footer-main {
@@ -122,13 +267,24 @@ h2 {
   justify-content: space-between;
 }
 
+.footer-menu {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .footer-menu li {
   display: inline-block;
 }
 
-.footer-bottom:before {
+.footer-bottom::before {
   content: '';
-  width: 10px;
+  background-color: red;
+  position: absolute;
+  width: 80px;
   height: 10px;
 }
 
@@ -178,6 +334,7 @@ h2 {
 
 .sort-filter li {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .sort-order {
@@ -203,4 +360,5 @@ h2 {
 
 .sort-pages li {
   display: inline-block;
+  vertical-align: middle;
 }
