@@ -65,15 +65,34 @@ h3 {
 .header-wrapper {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .header-wrapper_catalog {
   display: flex;
 }
 
+.header-logo {
+  width: 163px;
+  height: 36px;
+  background-image: url(../img/logo-header.png);
+}
+
+.header-logo:hover {
+  opacity: 0.6;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
 .header-search {
   line-height: 36px;
   letter-spacing: 0.01em;
+}
+
+.header-menu {
+  padding: 0;
 }
 
 .header-submenu {
@@ -84,7 +103,8 @@ h3 {
 
 .header-block_left {
   outline: 1px solid red;
-  width: 580px;
+  padding-left: 60px;
+  width: 520px;
 }
 
 .header-block_right {
@@ -92,21 +112,29 @@ h3 {
   width: 580px;
 }
 
-.header-user-menu {
-  display: flex;
-  justify-content: flex-end;
+.header-enter,
+.header-compare,
+.header-basket {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.header-enter {
-  flex-grow: 1;
-}
+
 
 .header-user-menu a,
 .header-user-login a{
   line-height: 36px;
 }
 
+.header-right-menu a{
+  display: inline-block;
+  vertical-align: middle;
+
+
+}
+
 .header-right-menu {
+  padding: 0;
   font-size: 0;
 }
 
@@ -120,14 +148,18 @@ h3 {
   text-transform: uppercase;
 }
 
-.header-right-menu li{
-  display: inline-block;
-}
 
 /* sliders */
 
+.sliders {
+  min-height: 550px;
+  background: #ffffff url(../img/slider-1.png) no-repeat;
+  background-position: 10% 50%
+}
+
 .sliders-container {
   padding-left: 600px;
+  padding-right: 80px;
 }
 
 .sliders-switch a {
@@ -156,6 +188,7 @@ h3 {
   line-height: normal;
   font-weight: 300;
   letter-spacing: 0.01em;
+  margin-bottom: 0;
 }
 
 .sliders-features1 {
@@ -183,7 +216,7 @@ h3 {
 }
 
 .catalog-item {
-  outline: 1px solid green;
+/*  outline: 1px solid green;*/
   display: block;
   width: 160px;
 }
@@ -191,6 +224,27 @@ h3 {
 .item-container {
   display: block;
   height: 160px;
+  background-color: #f7e296;
+/*
+  background-image: url(../img/popular-1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+*/
+  margin-bottom: 32px;
+}
+
+.item1 {
+  background-image: url(../img/popular-1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.item-container:hover{
+  background-color: #f0c52e;
+}
+
+.item-container:active{
+  opacity: 0.5;
 }
 
 /* options */
