@@ -225,25 +225,46 @@ h3 {
   display: block;
   height: 160px;
   background-color: #f7e296;
-/*
-  background-image: url(../img/popular-1.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-*/
   margin-bottom: 32px;
 }
 
 .item1 {
   background-image: url(../img/popular-1.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+/*  background-position: 50% 50%;*/
 }
 
-.item-container:hover{
+.item2 {
+  background-image: url(../img/popular-2.png);
+  background-position: 50% 100%;
+}
+
+.item3 {
+  background-image: url(../img/popular-3.png);
+/*  background-position: 50% 50%;*/
+}
+
+.item4 {
+  background-image: url(../img/popular-4.png);
+/*  background-position: 50% 50%;*/
+}
+
+.item5 {
+  background-image: url(../img/popular-5.png);
+/*  background-position: 50% 50%;*/
+}
+
+.item6 {
+  background-image: url(../img/popular-6.png);
+/*  background-position: 50% 50%;*/
+}
+
+.item-container:hover {
   background-color: #f0c52e;
 }
 
-.item-container:active{
+.item-container:active {
   opacity: 0.5;
 }
 
