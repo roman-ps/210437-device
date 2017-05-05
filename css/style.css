@@ -150,6 +150,13 @@
     background-position: -10px -1817px;
 }
 
+.sprite-www {
+    width: 27px;
+    height: 34px;
+    background-position: -10px -1875px;
+}
+
+
 /* FONTS */
 
 @font-face {
@@ -219,10 +226,14 @@ h3 {
 
 /* header */
 
+.header {
+  padding-top: 20px;
+}
+
 .header-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
+/*  padding-top: 20px;*/
 }
 
 .header-wrapper_catalog {
@@ -310,8 +321,6 @@ h3 {
 
 .sliders {
   min-height: 550px;
-  background: #ffffff url(../img/slider-1.png) no-repeat;
-  background-position: 10% 50%
 }
 
 .sliders-container {
@@ -484,6 +493,7 @@ h3 {
 .footer {
   min-height: 323px;
   background: #464646;
+  padding-top: 75px;
 }
 
 .footer,
@@ -491,12 +501,34 @@ h3 {
   color: #ffffff;
 }
 
+.footer-logo {
+  font-size: 0;
+  display: inline-block;
+  width: 164px;
+  height: 36px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -10px -254px;
+}
+
+.footer-logo:hover {
+  opacity: 0.6;
+}
+
+.footer-logo:active {
+  opacity: 0.3;
+}
+
 .footer-top {
   display: flex;
   justify-content: space-between;
+
 }
 
 .footer-user_menu {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
   line-height: 36px;
 }
 
@@ -533,6 +565,7 @@ h3 {
 
 .social-btn {
   display: inline-block;
+  vertical-align: middle;
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   width: 39px;
@@ -585,6 +618,32 @@ h3 {
   display: none;
 }
 
+.footer-copyright {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  position: relative;
+  width: 27px;
+  height: 34px;
+}
+
+.footer-copyright::before {
+  position: absolute;
+  content: '';
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 34px;
+  background-position: -10px -1875px;
+}
+
+.footer-copyright:hover::before {
+  opacity: 0.6;
+}
+
+.footer-copyright:active::before {
+  opacity: 0.3;
+}
 
 /* CATALOG.HTML */
 
@@ -599,6 +658,7 @@ h3 {
 
 .nav-breadcrumbs li {
   display: inline-block;
+  vertical-align: middle;
 }
 
 /* filter-sort */
