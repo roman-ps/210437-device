@@ -778,9 +778,10 @@ h3 {
 /* footer */
 
 .footer {
-  min-height: 323px;
+/*  min-height: 323px;*/
   background: #464646;
   padding-top: 63px;
+  padding-bottom: 63px;
 }
 
 .footer,
@@ -809,6 +810,7 @@ h3 {
 .footer-top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .footer-user_menu {
@@ -821,6 +823,7 @@ h3 {
 .footer-main {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 43px;
 }
 
 .footer-bottom {
@@ -850,7 +853,7 @@ h3 {
   content: '';
   background-color: #ffc600;
   width: 80px;
-  height: 10px;
+  height: 7px;
 }
 
 .social-btn {
