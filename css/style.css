@@ -470,8 +470,10 @@ h3 {
 }
 
 /*  кнопки "Подробнее" "Напишите нам" и т.д. */
+/*  ---------------------------------------- */
+/*  ---------------------------------------- */
 
-.all-btn {
+.buttons {
   display: block;
   box-sizing: border-box;
   padding: 4px 43px;
@@ -485,6 +487,21 @@ h3 {
   text-transform: uppercase;
 }
 
+.buttons-service {
+  padding: 0;
+  width: 160px;
+}
+
+.buttons-contacts {
+  margin-top: 58px;
+  width: 260px;
+  padding: 4px 33px 4px 43px;
+}
+
+.buttons-about {
+  width: 260px;
+  padding: 4px 0 4px 22px;
+}
 
 /* sliders */
 
@@ -541,7 +558,6 @@ h3 {
   font-weight: 300;
   letter-spacing: 0.01em;
   margin-bottom: 10px;
-
 }
 
 .sliders-features1 {
@@ -620,9 +636,14 @@ h3 {
 
 /* options */
 
+.options {
+  padding-bottom: 95px;
+  background-color: #e5e5e5;
+}
+
 .options .wrapper {
   display: flex;
-  margin-top: 116px;
+  margin-top: 115px;
 }
 
 .options-menu {
@@ -632,24 +653,52 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  width: 400px;
+  width: 280px;
+  margin-right: 120px;
   padding-left: 0;
-  padding-top: 40px;
+  padding-top: 35px;
+}
+
+.options-menu li {
+  padding-left: 20px;
+  margin-bottom: 24px;
 }
 
 .options-tab {
-  width: 760px;
+  position: relative;
+  flex-grow: 1;
+}
+
+.options-tab::after {
+  position: absolute;
+  content: '';
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 136px;
+  height: 164px;
+  background-position: -10px -1302px;
+  top: 53px;
+  right: 64px;
 }
 
 .options-tab h2 {
   margin-bottom: 26px;
 }
 
+.options-tab p {
+  letter-spacing: 0.01em;
+  width: 430px;
+}
+
 /* company */
 
 .wrapper .company {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.company {
+  margin-top: 94px;
 }
 
 .company-item {
@@ -659,7 +708,52 @@ h3 {
 /* about-contacts */
 
 .about-contacts {
+  padding-top: 102px;
+  padding-bottom: 80px;
   display: flex;
+}
+
+
+.about {
+  width: 565px;
+  position: relative;
+}
+
+.about::before {
+  position: absolute;
+  content: '';
+  background-color: #000000;
+  width: 80px;
+  height: 7px;
+  top: -9px;
+}
+
+.contacts {
+  width: 565px;
+  padding-left: 40px;
+  position: relative;
+}
+
+.contacts::before {
+  position: absolute;
+  content: '';
+  background-color: #000000;
+  width: 80px;
+  height: 7px;
+  top: -9px;
+}
+
+.about p {
+  width: 472px;
+  margin-bottom: 30px;
+}
+
+.contacts p {
+  margin-bottom: 40px;
+}
+
+.contacts-footer {   /* !!!!! */
+  margin-top: 80px;
 }
 
 .about-menu {
@@ -667,6 +761,8 @@ h3 {
   font-size: 16px;
   line-height: 40px;
   font-weight: 800;
+  margin-top: 67px;
+  margin-bottom: 53px;
 }
 
 .about-footer,
@@ -684,7 +780,7 @@ h3 {
 .footer {
   min-height: 323px;
   background: #464646;
-  padding-top: 75px;
+  padding-top: 63px;
 }
 
 .footer,
