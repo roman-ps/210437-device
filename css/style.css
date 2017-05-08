@@ -534,10 +534,7 @@ h3 {
 /*  ---------------------------------------- */
 
 .buttons {
-  display: block;
-  box-sizing: border-box;
-  padding: 4px 43px;
-  width: 220px;
+  display: inline-block;
   height: 40px;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
@@ -545,30 +542,55 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  background: linear-gradient(to bottom, #ffffff 1%,#ffffff 35%,#f0c52e 35%,#f0c52e 55%,#ffffff 55%,#ffffff 100%);
 }
 
-.buttons-service {
-  padding: 0;
-  width: 160px;
+.buttons:hover {
+  background: linear-gradient(to bottom, #f0c52e 1%,#f0c52e 100%);
+}
+
+.buttons:active {
+  background: linear-gradient(to bottom, #f0c52e 1%,#f0c52e 100%);
+  color: rgba(0, 0, 0, .3)
+}
+
+.buttons-slider {
+  padding: 0 43px;
+}
+
+.buttons-delievery {
+  padding: 0 20px;
+  background: linear-gradient(to bottom, #e5e5e5 1%,#e5e5e5 35%,#f0c52e 35%,#f0c52e 55%,#e5e5e5 55%,#e5e5e5 100%);
+}
+
+.buttons-warranty {
+  padding: 0 25px;
+  background: linear-gradient(to bottom, #e5e5e5 1%,#e5e5e5 35%,#f0c52e 35%,#f0c52e 55%,#e5e5e5 55%,#e5e5e5 100%);
+}
+
+.buttons-credit {
+  padding: 0 39px;
+  background: linear-gradient(to bottom, #e5e5e5 1%,#e5e5e5 35%,#f0c52e 35%,#f0c52e 55%,#e5e5e5 55%,#e5e5e5 100%);
 }
 
 .buttons-contacts {
-  margin-top: 58px;
-  width: 260px;
-  padding: 4px 33px 4px 43px;
+  margin-top: 61px;
+  padding: 0px 42px;
 }
 
 .buttons-about {
-  width: 260px;
-  padding: 4px 0 4px 22px;
+  padding: 0px 23px;
 }
 
 /* sliders */
 
 .sliders {
-  display: flex;
   margin-top: 70px;
   min-height: 553px;
+}
+
+.all-sliders {
+  display: flex;
 }
 
 .sliders-img {
@@ -585,6 +607,30 @@ h3 {
   flex-basis: 50%;
   margin-left: 115px;
   padding-right: 75px;
+  position: relative;
+}
+
+.sliders-container::before {
+  position: absolute;
+  content: '';
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
+  top: -3px;
+  left: 0;
+}
+
+.sliders-container::after {
+  position: absolute;
+  content:'01';
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 179px;
+  line-height: 179px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  top: -53px;
+  right: 43px;
+  color: #ffffff;
 }
 
 .sliders-container h2 {
@@ -597,20 +643,9 @@ h3 {
 }
 
 .sliders-switch {
-  margin-top: 42px;
-  margin-bottom: 35px;
+  margin-top: 46px;
+  margin-bottom: 33px;
 }
-
-/*
-.sliders-switch a {
-  font-family: 'Gilroy', 'Arial', sans-serif;
-  font-size: 18px;
-  line-height: 36px;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-*/
 
 .sliders-features {
   display: flex;
@@ -725,15 +760,39 @@ h3 {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  width: 280px;
-  margin-right: 120px;
+  width: 284px;
+  margin-right: 117px;
   padding-left: 0;
   padding-top: 35px;
 }
 
 .options-menu li {
-  padding-left: 20px;
+/*  padding-left: 20px;*/
   margin-bottom: 24px;
+}
+
+.active-tab {
+  position: relative;
+  background-color: #000000;
+}
+
+.active-tab::after {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
+  right: 0;
+  top: -83px;
+}
+
+.active-tab a {
+  color: #f7e184;
+}
+
+.active-tab .buttons-delievery {
+  background: #000000;
+/*  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 20%,#e5e5e5 20%,#e5e5e5 100%);*/
 }
 
 .options-tab {
