@@ -288,7 +288,7 @@ h3 {
 .search-input {
   height: 45px;
   border: none;
-  border-top: 2px solid #f7e296;
+  border-bottom: 2px solid transparent;
   opacity: .3;
   padding-left: 40px;
   width: 335px;
@@ -1218,17 +1218,82 @@ background-position: -10px -447px;
   transform: rotate(-45deg);
 }
 
-/* filter-sort */
+/* filter-sort wrapper-wide*/
 
 .filter-sort {
   display: flex;
   justify-content: space-between;
 }
 
+.filter-head {
+  position: relative;
+}
+
+.wrapper-wide1 {
+  background-color: #ebebeb;
+}
+
+.wrapper-left-filter,
+.wrapper-left-filter2 {
+  position: relative;
+}
+
+.wrapper-left-filter::before {
+  position: absolute;
+  content: '';
+  height: 69px;
+  background-color: #dcdcdc;
+  top: 0;
+  left: -9999px;
+  right: 5px;
+}
+
+.wrapper-left-filter2::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  background-color: #efefef;
+  top: 0;
+  left: -9999px;
+  right: 0;
+}
+
+.wrapper-wide1 .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-wide2 .wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #efefef;
+}
+
+.wrapper-left {
+  width: 330px;
+  box-sizing: border-box;
+  padding-right: 70px;
+  padding-left: 60px;
+}
+
+.wrapper-wide2 .wrapper-right {
+  background-color: #ffffff;
+  padding-left: 70px;
+}
+
+.wrapper-right {
+  width: 760px;
+}
+
+.sort-container {
+  margin-top: 70px;
+}
+
+
 /* filter */
 
 .filter {
-/*  width: 260px;*/
+  position: relative;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   line-height: normal;
@@ -1236,6 +1301,8 @@ background-position: -10px -447px;
   letter-spacing: 0.2em;
   background-color: #efefef;
   margin: 0;
+  width: 200px;
+  margin-top: 70px;
 }
 
 .filter-head,
@@ -1250,8 +1317,77 @@ background-position: -10px -447px;
 
 .filter-price,
 .form-title {
+  margin-top: 13px;
   font-size: 18px;
   letter-spacing: 0.01em;
+}
+
+input {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+input[type="checkbox"] + label::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #dbdbdb;
+  width: 23px;
+  height: 23px;
+/*  border: 1px solid #000000;*/
+  top: 6px;
+  left: -35px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 7px;
+  background-position: -10px -10px;
+  background-image: url(../img/sprite.png);
+  top: 15px;
+  left: -29px;
+}
+
+input[type="radio"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+input[type="radio"] + label::before {
+  position: absolute;
+  content: '';
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c6c6c6;
+  border-radius: 50%;
+  top: 7px;
+  left: -37px;
+}
+
+input[type="radio"]:checked + label::after {
+  position: absolute;
+  content: '';
+  width: 9px;
+  height: 9px;
+  background-position: -10px -37px;
+  background-image: url(../img/sprite.png);
+  top: 15px;
+  left: -29px;
+}
+
+.header-search input {
+  display: block;
 }
 
 .filter label,
@@ -1293,7 +1429,7 @@ background-position: -10px -447px;
 }
 
 .filter-range_control .toggle-max {
-  left: 115px;
+  left: 110px;
 }
 
 .filter-range_control .filter-toggle:hover {
@@ -1310,11 +1446,20 @@ background-position: -10px -447px;
 }
 
 .form-checkbox_container {
+  margin-top: 27px;
+  padding-bottom: 30px;
   border-top: 2px solid #000000;
   border-bottom: 2px solid #000000;
 }
 
+.form-radio_container {
+  margin-bottom: 31px;
+}
 
+.form-checkbox_item,
+.form-radio_item {
+  padding-left: 25px;
+}
 
 /* sort */
 
@@ -1413,7 +1558,6 @@ background-position: -10px -447px;
 
 .sort-active::after {
   border-top: 9px solid #000000;
-/*  border-bottom: 9px solid #000000;*/
 }
 
 .sort-container {
@@ -1425,6 +1569,7 @@ background-position: -10px -447px;
 .sort-item {
   position: relative;
   width: 360px;
+  margin-bottom: 31px;
 }
 
 .sort-item_head {
@@ -1435,13 +1580,14 @@ background-position: -10px -447px;
   letter-spacing: 0.01em;
   display: flex;
   justify-content: space-between;
+  margin-top: 25px;
 }
 
 .sort-item_price {
   display: block;
   font-size: 16px;
   font-weight: 300;
-  width: 90px;
+/*  width: 82px;*/
 }
 
 .item-action {
@@ -1450,10 +1596,12 @@ background-position: -10px -447px;
   position: absolute;
   top: 160px;
   left: 80px;
-  width: 210px;
+  width: 212px;
   height: 80px;
-/*  background: rgba(255, 255, 255, 0.9) transparent;*/
-/*  background-color: transparent;*/
+}
+
+.sort-item_title {
+  width: 270px;
 }
 
 .sort-item:hover .item-action {
@@ -1500,6 +1648,11 @@ background-position: -10px -447px;
   text-transform: uppercase;
   background-color: #ebebeb;
   margin-bottom: 73px;
+  margin-top: -9px;
+}
+
+.sort-pages {
+  margin-right: 25px;
 }
 
 .sort-pages a{
@@ -1515,6 +1668,7 @@ background-position: -10px -447px;
 }
 
 .sort-pages li {
+  margin: 0 10px;
   display: inline-block;
 }
 
@@ -1525,7 +1679,7 @@ background-position: -10px -447px;
 .sort-backward,
 .sort-forward {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 27px 30px;
 }
 
 .sort-backward:hover,
@@ -1612,61 +1766,3 @@ background-position: -10px -447px;
   padding-top: 20px;
 }
 
-
-
-.wrapper-wide1 {
-  background-image: linear-gradient(to right,#ddd 31.5%,#ebebeb 31.5%);
-}
-
-
-.filter-head {
-  position: relative;
-}
-
-.filter-head::before {
-  position: absolute;
-  content: '';
-  height: 69px;
-  width: 9999px;
-/*  background-color: #dcdcdc;*/
-  top: -15px;
-  left: -9992px;
-}
-
-.wrapper-wide1 {
-  background-color: #ebebeb;
-}
-
-.wrapper-wide1 .wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.wrapper-wide2 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  background-color: #efefef;
-}
-
-.wrapper-left {
-  padding-right: 70px;
-  padding-left: 60px;
-}
-
-.wrapper-wide2 {
-  background-color: red
-}
-
-.wrapper-wide2 .wrapper-right {
-  background-color: #ffffff;
-  padding-left: 60px;
-}
-
-.wrapper-right {
-  width: 760px;
-}
-
-
-.sort-container {
-  margin-top: 40px;
-}
