@@ -328,6 +328,7 @@ h3 {
 
 .header-menu {
   padding: 0;
+  position: relative;
 }
 
 .header-menu-catalog {
@@ -348,13 +349,25 @@ h3 {
 }
 
 .header-submenu {
-  height: 110px;
-  padding-left: 0px;
+  position: absolute;
   display: none;
+  width: 1100px;
+  left: -60px;
+  padding-left: 60px;
+  padding-bottom: 28px;
+  height: 129px;
   letter-spacing: 0.01em;
   line-height: 36px;
   flex-direction: column;
   flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: #f7e296;
+  z-index: 10;
+}
+
+.header-submenu li {
+  width: 200px;
+/*  background-color: red;*/
 }
 
 .header-menu-catalog:hover {
@@ -633,6 +646,7 @@ h3 {
   background-color: #ffffff;
   top: -3px;
   left: 0;
+  z-index: 1;
 }
 
 .sliders-container::after {
@@ -646,6 +660,7 @@ h3 {
   top: -53px;
   right: 43px;
   color: #ffffff;
+  z-index: 5;
 }
 
 .sliders-container h2 {
