@@ -590,6 +590,13 @@ h3 {
   padding-right: 39px;
 }
 
+.buttons-popup {
+  padding-left: 35px;
+  padding-right: 37px;
+  border: none;
+  background-color: transparent;
+}
+
 /* sliders */
 
 .sliders {
@@ -1220,13 +1227,20 @@ background-position: -10px -447px;
 /* filter */
 
 .filter {
-  width: 330px;
+/*  width: 260px;*/
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 16px;
   line-height: normal;
   font-weight: 800;
   letter-spacing: 0.2em;
   background-color: #efefef;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.filter-price {
+  border-top: 2px solid #000000;
+  padding-top: 10px;
 }
 
 .filter-price,
@@ -1243,6 +1257,60 @@ background-position: -10px -447px;
   font-weight: 300;
   letter-spacing: 0.01em;
 }
+
+.filter-range_control {
+  position: relative;
+/*  width: 200px;*/
+  height: 40px;
+  padding-top: 20px;
+}
+
+.filter-range_control .filter-scale {
+  height: 2px;
+  background: #dbdbdb;
+}
+
+.filter-range_control .filter-bar {
+  width: 57%;
+  height: 2px;
+  background: #91c92f;
+}
+
+.filter-range_control .filter-toggle {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #000000;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter-range_control .toggle-max {
+  left: 115px;
+}
+
+.filter-range_control .filter-toggle:hover {
+  border: 2px solid #ffffff;
+  background-color: #7eae29;
+}
+
+.filter-price_control {
+  opacity: .2;
+}
+
+.filter-min_price {
+  margin-right: 65px;
+}
+
+.form-checkbox_container {
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+
 
 /* sort */
 
@@ -1463,4 +1531,77 @@ background-position: -10px -447px;
 .sort-backward:active,
 .sort-forward:active {
   opacity: .3;
+}
+
+/* ------ POPUP ------- */
+
+.popup {
+  display: block;
+  position: fixed;
+  width: 960px;
+  min-height: 553px;
+  top: 0%;
+  left: 21%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 50px -5px rgba(4, 6, 6, .75);
+  animation: bounce .8s;
+}
+
+.popup-wrapper {
+  width: 760px;
+  margin: 0 auto;
+}
+
+.popup-name,
+.popup-email,
+.popup-textarea {
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+}
+
+.popup-close {
+  font-size: 0;
+  position: relative;
+}
+
+.popup-form {
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: space-between;
+}
+
+.popup-name input,
+.popup-email input,
+.popup-text {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+  opacity: .5;
+  border: none;
+}
+
+.popup-name input,
+.popup-email input,
+.popup-textarea textarea {
+  margin-top: 10px
+}
+
+.popup-name input,
+.popup-email input {
+  width: 360px;
+  height: 50px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.popup-text {
+  width: 760px;
+  box-sizing: border-box;
+  min-height: 156px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
