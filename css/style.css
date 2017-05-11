@@ -331,6 +331,11 @@ h3 {
   position: relative;
 }
 
+
+.header-menu li:hover .header-submenu {
+  display: flex;
+}
+
 .header-menu-catalog {
   position: relative;
 }
@@ -363,6 +368,11 @@ h3 {
   align-content: flex-start;
   background-color: #f7e296;
   z-index: 10;
+/*
+  top: 25px;
+  padding-top: 20px;
+*/
+
 }
 
 .header-submenu li {
@@ -615,18 +625,55 @@ h3 {
 .sliders {
   margin-top: 70px;
   min-height: 553px;
+  position: relative;
 }
 
-.all-sliders {
+.sliders-control {
+  position: absolute;
+  height: 20px;
+  right: 75px;
+  top: 275px;
+}
+
+.sliders-control label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  margin: 0 10px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: .3;
+}
+
+
+.sliders input[type=radio] {
+  position: absolute;
+  opacity: 0;
+}
+
+
+#btn-1:checked ~ .sliders-control label[for="btn-1"],
+#btn-2:checked ~ .sliders-control label[for="btn-2"],
+#btn-3:checked ~ .sliders-control label[for="btn-3"] {
+  opacity: 1;
+}
+
+.slider {
+  display: none;
+}
+
+#btn-1:checked ~ .all-sliders .slider:nth-child(1) {
   display: flex;
 }
 
-.all-sliders2 {
-  display: none;
+#btn-2:checked ~ .all-sliders .slider:nth-child(2) {
+  display: flex;
 }
 
-.all-sliders3 {
-  display: none;
+#btn-3:checked ~ .all-sliders .slider:nth-child(3) {
+  display: flex;
 }
 
 .sliders-img {
@@ -669,6 +716,14 @@ h3 {
   right: 43px;
   color: #ffffff;
   z-index: 5;
+}
+
+.container-2::after {
+  content:'02';
+}
+
+.container-3::after {
+  content:'03';
 }
 
 .sliders-container h2 {
@@ -827,10 +882,19 @@ background-position: -10px -447px;
 
 .active-tab .buttons-delievery {
   background: #000000;
-/*  background: linear-gradient(to bottom, #ffffff 0%,#ffffff 20%,#e5e5e5 20%,#e5e5e5 100%);*/
 }
 
 .options-tab {
+  position: relative;
+  flex-grow: 1;
+}
+
+.options-tab-2 {
+  position: relative;
+  flex-grow: 1;
+}
+
+.options-tab-3 {
   position: relative;
   flex-grow: 1;
 }
@@ -1345,7 +1409,7 @@ background-position: -10px -447px;
   letter-spacing: 0.01em;
 }
 
-input {
+.filter input {
   display: none;
 }
 
