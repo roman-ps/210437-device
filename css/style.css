@@ -621,6 +621,14 @@ h3 {
   display: flex;
 }
 
+.all-sliders2 {
+  display: none;
+}
+
+.all-sliders3 {
+  display: none;
+}
+
 .sliders-img {
   flex-basis: 50%;
 }
