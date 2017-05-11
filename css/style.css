@@ -633,6 +633,7 @@ h3 {
   height: 20px;
   right: 75px;
   top: 275px;
+  z-index: 10;
 }
 
 .sliders-control label {
@@ -649,8 +650,7 @@ h3 {
 
 
 .sliders input[type=radio] {
-  position: absolute;
-  opacity: 0;
+  display: none;
 }
 
 
@@ -684,6 +684,10 @@ h3 {
   display: block;
   margin-left: 90px;
   margin-top: -41px;
+}
+
+.slider-img3 img{
+  margin-top: 25px;
 }
 
 .sliders-container {
@@ -857,7 +861,6 @@ background-position: -10px -447px;
 }
 
 .options-menu li {
-/*  padding-left: 20px;*/
   margin-bottom: 24px;
 }
 
@@ -884,19 +887,16 @@ background-position: -10px -447px;
   background: #000000;
 }
 
-.options-tab {
-  position: relative;
-  flex-grow: 1;
-}
-
-.options-tab-2 {
-  position: relative;
-  flex-grow: 1;
-}
-
+.options-tab,
+.options-tab-2,
 .options-tab-3 {
   position: relative;
   flex-grow: 1;
+}
+
+.options-tab-2,
+.options-tab-3 {
+  display: none;
 }
 
 .options-tab::after {
@@ -907,6 +907,30 @@ background-position: -10px -447px;
   width: 136px;
   height: 164px;
   background-position: -10px -1771px;
+  top: 53px;
+  right: 64px;
+}
+
+.options-tab-2::after {
+  position: absolute;
+  content: '';
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 171px;
+  height: 195px;
+  background-position: -10px -1955px;
+  top: 53px;
+  right: 64px;
+}
+
+.options-tab-3::after {
+  position: absolute;
+  content: '';
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  width: 156px;
+  height: 188px;
+  background-position: -10px -1563px;
   top: 53px;
   right: 64px;
 }
@@ -1157,10 +1181,11 @@ background-position: -10px -447px;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  width: 440px;
+  width: 423px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 37px;
 }
 
 .footer-menu li {
@@ -1172,6 +1197,13 @@ background-position: -10px -447px;
   background-color: #ffc600;
   width: 80px;
   height: 7px;
+}
+
+.footer-social {
+  width: 160px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 52px;
 }
 
 .social-btn {
