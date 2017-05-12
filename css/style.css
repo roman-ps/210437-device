@@ -1241,13 +1241,6 @@ background-position: -10px -447px;
   opacity: .1;
 }
 
-
-/* popup */
-
-.popup {
-  display: none;
-}
-
 .footer-copyright {
   display: inline-block;
   vertical-align: middle;
@@ -1815,15 +1808,67 @@ input[type="radio"]:checked + label::after {
 
 .popup {
   display: none;
-/*  display: block;*/
   position: fixed;
   width: 960px;
   min-height: 553px;
-  top: 0%;
+  top: 10%;
   left: 21%;
   background-color: #ffffff;
   box-shadow: 0 4px 50px -5px rgba(4, 6, 6, .75);
+}
+
+.popup-show {
+  display: block;
   animation: bounce .6s;
+}
+
+.popup-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  font-size: 0;
+  background-color: #f7e296;
+  border-radius: 50%;
+  border: none;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.popup-close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 2px;
+  background-color: #ffffff;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.popup-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 2px;
+  background-color: #ffffff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.popup-close:hover {
+  opacity: 1;
+}
+
+.popup-close:active {
+  opacity: 1;
+}
+
+.popup-close:active::before,
+.popup-close:active::after {
+  opacity: .3;
 }
 
 .popup-wrapper {
@@ -1840,15 +1885,11 @@ input[type="radio"]:checked + label::after {
   font-weight: 800;
 }
 
-.popup-close {
-  font-size: 0;
-  position: relative;
-}
-
 .popup-form {
   display: flex;
   flex-wrap:  wrap;
   justify-content: space-between;
+  padding-top: 50px;
 }
 
 .popup-name input,
