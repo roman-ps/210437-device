@@ -249,11 +249,24 @@ h3 {
 }
 
 .header-logo {
+  display: inline-block;
   margin-bottom: 19px;
   width: 163px;
   height: 36px;
   background-image: url(../img/logo-header.png);
   font-size: 0;
+}
+
+/*
+.header-logo a {
+  display: inline-block;
+  width: 163px;
+  height: 36px;
+}
+*/
+
+.logo {
+  display: block;
 }
 
 .header-logo:hover {
@@ -331,7 +344,6 @@ h3 {
   position: relative;
 }
 
-
 .header-menu li:hover .header-submenu {
   display: flex;
 }
@@ -368,11 +380,6 @@ h3 {
   align-content: flex-start;
   background-color: #f7e296;
   z-index: 10;
-/*
-  top: 25px;
-  padding-top: 20px;
-*/
-
 }
 
 .header-submenu li {
@@ -797,7 +804,7 @@ h3 {
   content: '';
   display: block;
   height: 160px;
-  background-color: #f7e296;
+  background-color: rgba(240, 197, 46, .5);
   background-image: url(../img/sprite.png);
   background-repeat: no-repeat;
   margin-bottom: 32px;
@@ -828,11 +835,12 @@ background-position: -10px -447px;
 }
 
 .catalog-item:hover::before {
-  background-color: #f0c52e;
+  background-color: rgba(240, 197, 46, 1);
 }
 
 .catalog-item:active::before {
-  opacity: .5;
+  background-color: rgba(240, 197, 46, 1);
+  opacity: .3;
 }
 
 /* options */
