@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
     <title>HTML Academy: Device Index</title>
   </head>
@@ -65,7 +65,7 @@
                 <img src="img/slider-1.png" alt="слайд1" width=384 height=486>
               </div>
               <div class="sliders-container">
-                <h2>Делай селфи, как&nbsp;Бен Стиллер!</h2>
+                <h2 class="title-h2">Делай селфи, как&nbsp;Бен Стиллер!</h2>
                 <p>Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <div class="sliders-switch">
@@ -93,7 +93,7 @@
                 <img src="img/slider-2.png" alt="слайд2" width=345 height=485>
               </div>
               <div class="sliders-container container-2">
-                <h2>Худеем<br> правильно!</h2>
+                <h2 class="title-h2">Худеем<br> правильно!</h2>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
                 не&nbsp;пропускать занятия и соблюдать диету.</p>
                 <div class="sliders-switch">
@@ -113,7 +113,7 @@
                 <img src="img/slider-3.png" alt="слайд3" width=526 height=334>
               </div>
               <div class="sliders-container container-3">
-                <h2>Порхает как бабочка, жалит как пчела!</h2>
+                <h2 class="title-h2">Порхает как бабочка, жалит как пчела!</h2>
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным&nbsp;лазером, замаскированным под стандартную камеру.</p>
                 <div class="sliders-switch">
@@ -157,19 +157,19 @@
           <li><a href="#" class="buttons buttons-credit">Кредит</a></li>
         </ul>
         <div class="options-tab">
-          <h2>Доставка</h2>
+          <h2 class="title-h2">Доставка</h2>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему
           подъезду совершенно бесплатно! Ведь мы неплохо
           заработаем, поднимая его на ваш этаж.</p>
         </div>
         <div class="options-tab-2">
-          <h2>Гарантия</h2>
+          <h2 class="title-h2">Гарантия</h2>
           <p>Если из-за возгорания купленного у нас товара у вас сгорит
           дом - не переживайте, мы выдадим вам новый.
           Товар, не дом, конечно же.</p>
         </div>
         <div class="options-tab-3">
-          <h2>Кредит</h2>
+          <h2 class="title-h2">Кредит</h2>
           <p>Залезть в долговую яму стало проще! Кредитные
           консультанты подберут для вас наиболее выгодные
           условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -188,7 +188,7 @@
     <div class="about-contacts">
 
       <div class="about">
-        <h2>О нас</h2>
+        <h2 class="title-h2">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика,
         который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки
@@ -202,11 +202,11 @@
       </div>
 
       <div class="contacts">
-        <h2>Контакты</h2>
+        <h2 class="title-h2">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
         проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="https://yandex.ru/maps" class="contacts-map"><img src="img/map.jpg" alt="map" width="560" height="222"></a>
-        <a href="#" class="buttons buttons-contacts">Напишите нам</a>
+        <div class="map" id="map"></div>
+        <a href="form.html" class="buttons buttons-contacts">Напишите нам</a>
       </div>
 
     </div>
@@ -259,10 +259,11 @@
           <p class="popup-textarea">Текст письма:<br>
             <textarea class="popup-text" name="text" placeholder="В свободной форме"></textarea>
           </p>
-          <input type="button" class="buttons buttons-popup" form="write" value="Отправить">
+          <input type="submit" class="buttons buttons-popup"  form="write" value="Отправить">
         </form>
       </div>
     </div>
-    <script src="js/main-min.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
