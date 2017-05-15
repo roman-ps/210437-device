@@ -5,6 +5,9 @@ var login = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=e-mail]");
 var form = popup.querySelector("form");
 var text = popup.querySelector("[name=text]");
+var maplink = document.querySelector(".contacts-map");
+var mappopup = document.querySelector(".popup-map");
+
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
@@ -18,10 +21,23 @@ close.addEventListener("click", function(event) {
   popup.classList.remove("popup-error");
 });
 
+maplink.addEventListener("click", function(event) {
+  event.preventDefault();
+  mappopup.classList.add("popup-map-show");
+});
+
 form.addEventListener("submit", function(event) {
   if (!login.value || !email.value || !text.value) {
     event.preventDefault();
     popup.classList.add("popup-error");
+  }
+});
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode == 27) {
+    if (mappopup.classList.contains("popup-map-show")) {
+      mappopup.classList.remove("popup-map-show");
+    }
   }
 });
 
@@ -32,7 +48,6 @@ window.addEventListener("keydown", function(event) {
     }
   }
 });
-
 
 var myMap;
 

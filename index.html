@@ -205,7 +205,8 @@
         <h2 class="title-h2">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
         проверить работоспособность покупки. Всякое бывает.</p>
-        <div class="map" id="map"></div>
+<!--        <div class="map" id="map"></div>-->
+        <a href="https://yandex.ru/maps" class="contacts-map"><img src="img/map.jpg" alt="map" width="560" height="222"></a>
         <a href="form.html" class="buttons buttons-contacts">Напишите нам</a>
       </div>
 
@@ -259,11 +260,14 @@
           <p class="popup-textarea">Текст письма:<br>
             <textarea class="popup-text" name="text" placeholder="В свободной форме"></textarea>
           </p>
-          <input type="submit" class="buttons buttons-popup"  form="write" value="Отправить">
+          <input type="submit" class="buttons buttons-popup" form="write" value="Отправить">
         </form>
       </div>
     </div>
-    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <div class="popup-map" id="map"></div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -747,6 +747,7 @@ img {
 }
 
 .sliders-img {
+  width: 485px;
 }
 
 .sliders-img img {
@@ -2116,4 +2117,21 @@ input[type="radio"]:checked + label::after {
           animation-name: error;
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
+}
+
+.contacts-map {
+  display: inline-block;
+}
+
+.popup-map {
+  display: none;
+  position: fixed;
+  width: 994px;
+  height: 593px;
+  top: 10%;
+  left: 10%;
+}
+
+.popup-map-show {
+  display: block;
 }
