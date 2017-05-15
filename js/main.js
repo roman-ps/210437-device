@@ -7,7 +7,7 @@ var form = popup.querySelector("form");
 var text = popup.querySelector("[name=text]");
 var maplink = document.querySelector(".contacts-map");
 var mappopup = document.querySelector(".popup-map");
-
+var mapclose = mappopup.querySelector(".popup-close");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
@@ -24,6 +24,11 @@ close.addEventListener("click", function(event) {
 maplink.addEventListener("click", function(event) {
   event.preventDefault();
   mappopup.classList.add("popup-map-show");
+});
+
+mapclose.addEventListener("click", function(event) {
+  event.preventDefault();
+  mappopup.classList.remove("popup-map-show");
 });
 
 form.addEventListener("submit", function(event) {

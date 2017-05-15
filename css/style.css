@@ -2011,6 +2011,7 @@ input[type="radio"]:checked + label::after {
   border: none;
   opacity: .5;
   cursor: pointer;
+  z-index: 10;
 }
 
 .popup-close::before {
@@ -2129,9 +2130,13 @@ input[type="radio"]:checked + label::after {
   width: 994px;
   height: 593px;
   top: 10%;
-  left: 10%;
+  left: 20%;
 }
 
 .popup-map-show {
   display: block;
+  -webkit-animation-name: modal;
+          animation-name: modal;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
